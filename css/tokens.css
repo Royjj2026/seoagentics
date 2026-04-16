@@ -1,0 +1,187 @@
+/**
+ * Site-wide design tokens — fonts, type scale, spacing, radii, colours.
+ * Blog: default :root values (readable, light-first).
+ * Marketing: body[data-page] overrides for the dark product theme.
+ * Change accents, type, and spacing here to update the whole site.
+ */
+
+:root {
+  /* Typography — families */
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Typography — scale (rem) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: clamp(1.35rem, 3.5vw, 1.75rem);
+  --text-4xl: clamp(1.5rem, 4.5vw, 2.25rem);
+  --text-5xl: clamp(1.75rem, 5vw, 2.75rem);
+  --text-hero: clamp(2rem, 7vw, 4.75rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+  --space-10: 5rem;
+  --space-11: 6rem;
+  --space-12: 6.25rem;
+
+  /* Aliases (blog / legacy utilities) */
+  --space-xs: var(--space-1);
+  --space-sm: var(--space-2);
+  --space-md: var(--space-4);
+  --space-lg: var(--space-5);
+  --space-xl: var(--space-6);
+  --space-2xl: var(--space-8);
+
+  /* Corners */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  --radius: var(--radius-md);
+
+  /* Layout */
+  --container-max: 1180px;
+  --container-max-blog: 72rem;
+  --container-padding-x: clamp(1rem, 4vw, 3rem);
+  --section-padding-y: clamp(3.5rem, 8vw, 6.25rem);
+  --section-padding-y-lg: clamp(4rem, 10vw, 7.5rem);
+  --content-max: 65ch;
+
+  /* Blog — light surface (default) */
+  color-scheme: light;
+  --color-page: #f7f7f6;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c5c5c;
+  --color-text-faint: #8a8a8a;
+  --color-border: #e5e5e3;
+  --color-accent: #1d4ed8;
+  --color-accent-hover: #1e40af;
+  --color-accent-muted: rgba(29, 78, 216, 0.1);
+  /* Text on filled accent buttons (blog) */
+  --color-accent-contrast: #ffffff;
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+
+  /* Back-compat name used in style.css */
+  --color-muted: var(--color-text-muted);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-page: #141414;
+    --color-surface: #1c1c1c;
+    --color-text: #f0f0f0;
+    --color-text-muted: #a3a3a3;
+    --color-text-faint: #888888;
+    --color-border: #333333;
+    --color-accent: #60a5fa;
+    --color-accent-hover: #93c5fd;
+    --color-accent-muted: rgba(96, 165, 250, 0.12);
+  }
+}
+
+/**
+ * Marketing pages — dark theme, same scale & fonts as blog.
+ * Legacy aliases (--bg, --accent, …) keep existing marketing.css working.
+ */
+body[data-page] {
+  color-scheme: dark;
+  --color-page: #070a0e;
+  --color-surface: #0c1018;
+  --color-surface-raised: #111720;
+  --color-text: #e8edf5;
+  --color-text-muted: rgba(232, 237, 245, 0.68);
+  --color-text-faint: rgba(232, 237, 245, 0.22);
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-hover: rgba(255, 255, 255, 0.13);
+  --color-accent: #2ee1b5;
+  --color-accent-hover: #52edc4;
+  --color-accent-dim: rgba(46, 225, 181, 0.12);
+  --color-accent-border: rgba(46, 225, 181, 0.22);
+  --color-nav-scrolled: rgba(7, 10, 14, 0.85);
+  --color-overlay: rgba(0, 0, 0, 0.88);
+  --color-logo-mark: #070a0e;
+  /* Text on mint CTA buttons */
+  --color-accent-contrast: #070a0e;
+
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-hover);
+  --color-muted: var(--color-text-muted);
+
+  /* Legacy variable names used across marketing.css */
+  --accent: var(--color-accent);
+  --accent-dim: var(--color-accent-dim);
+  --accent-border: var(--color-accent-border);
+  --bg: var(--color-page);
+  --bg2: var(--color-surface);
+  --bg3: var(--color-surface-raised);
+  --text: var(--color-text);
+  --text-muted: var(--color-text-muted);
+  --text-faint: var(--color-text-faint);
+  --border: var(--color-border);
+  --border-hover: var(--color-border-hover);
+
+  /*
+   * Space below the fixed header → first line of hero (badge, breadcrumb, or headline).
+   * Applies to all marketing pages (home, pricing, about, contact, etc.).
+   * Raise --hero-gap-below-nav (desktop) or the + value in --hero-padding-top-sm (mobile) for more air.
+   */
+  --nav-bar-height: 64px;
+  --hero-gap-below-nav: clamp(3.35rem, 6.2vw, 4.5rem);
+  --hero-padding-top: calc(var(--nav-bar-height) + var(--hero-gap-below-nav));
+  --hero-padding-bottom: clamp(3.75rem, 7vw, 5.5rem);
+  /* ≤900px: keep a proportional gap under the nav */
+  --hero-padding-top-sm: calc(var(--nav-bar-height) + 1.625rem);
+  --hero-padding-bottom-sm: clamp(2.35rem, 6vw, 3.25rem);
+}
+
+/* About: tighter gap under fixed header → breadcrumbs (less than default marketing hero) */
+body[data-page="about"] {
+  --hero-gap-below-nav: clamp(1.25rem, 2.5vw, 1.75rem);
+  --hero-padding-top: calc(var(--nav-bar-height) + var(--hero-gap-below-nav));
+  --hero-padding-top-sm: calc(var(--nav-bar-height) + 1rem);
+}
+
+/* Primary nav CTAs are <a>s — remove default link underline */
+body[data-page] #navbar .btn-ghost,
+body[data-page] #navbar .btn-accent {
+  text-decoration: none;
+}
+
+/* Home: avoid vertical “jump” when hero height changes (fonts) — browser scroll anchoring */
+body[data-page="home"] {
+  overflow-anchor: none;
+}
+
+/* Stops the page from shifting sideways when the vertical scrollbar appears */
+html {
+  scrollbar-gutter: stable;
+}
