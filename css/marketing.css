@@ -4958,6 +4958,29 @@ body[data-page="contact"] .page {
   .cat-tabs::-webkit-scrollbar {
     display: none;
   }
+  body[data-page="agents"] .cat-tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  body[data-page="agents"] .agent-card {
+    padding: 18px 16px !important;
+  }
+  body[data-page="agents"] .agent-card-top {
+    align-items: flex-start;
+  }
+  body[data-page="agents"] .agent-name,
+  body[data-page="agents"] .agent-desc {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  body[data-page="agents"] .library-header,
+  body[data-page="agents"] .library-section .section-sub,
+  body[data-page="agents"] .library-footer {
+    text-align: left;
+  }
+  body[data-page="agents"] .library-count {
+    justify-content: flex-start;
+  }
 
   /* Video chrome & thumbnail */
   .video-chrome {
@@ -5088,6 +5111,23 @@ body[data-page="contact"] .page {
     margin-left: auto;
     margin-right: auto;
   }
+  body[data-page="agents"] .hero h1 {
+    font-size: clamp(1.7rem, 9vw, 2.3rem) !important;
+    letter-spacing: -0.04em !important;
+  }
+  body[data-page="agents"] .cat-tab {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  body[data-page="agents"] .agent-name {
+    font-size: 12px;
+  }
+  body[data-page="agents"] .agent-desc {
+    font-size: 11px;
+  }
+  body[data-page="agents"] .library-num-label {
+    font-size: 16px !important;
+  }
 
   .deploy-inner,
   .draft-inner,
@@ -5100,4 +5140,40 @@ body[data-page="contact"] .page {
 /* Inline YouTube in hero — later duplicate .hero-video-wrap blocks reset cursor: pointer */
 .hero-video-wrap:has(.video-embed) {
   cursor: default;
+}
+
+/* Agents mobile hardening: force fluid layout if any merged desktop rule leaks through */
+@media (max-width: 900px) {
+  body[data-page="agents"] {
+    overflow-x: hidden;
+  }
+  body[data-page="agents"] .container,
+  body[data-page="agents"] .hero-inner,
+  body[data-page="agents"] .what-inner,
+  body[data-page="agents"] .how-steps,
+  body[data-page="agents"] .library-header,
+  body[data-page="agents"] .agent-grid,
+  body[data-page="agents"] .output-grid,
+  body[data-page="agents"] .method-inner,
+  body[data-page="agents"] .standalone-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  body[data-page="agents"] .what-inner,
+  body[data-page="agents"] .standalone-inner,
+  body[data-page="agents"] .method-inner {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  body[data-page="agents"] .how-step {
+    grid-template-columns: 1fr !important;
+  }
+  body[data-page="agents"] .how-step-num,
+  body[data-page="agents"] .how-step-body,
+  body[data-page="agents"] .how-step-detail {
+    border-right: none !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
