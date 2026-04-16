@@ -4892,6 +4892,14 @@ body[data-page="contact"] .page {
     padding-top: var(--hero-padding-top-sm) !important;
     padding-bottom: var(--hero-padding-bottom-sm) !important;
   }
+  body[data-page="about"] .hero .container,
+  body[data-page="about"] .hero-copy,
+  body[data-page="about"] .hero-copy h1,
+  body[data-page="about"] .hero-intro,
+  body[data-page="about"] .hero-breadcrumb {
+    text-align: center !important;
+    justify-content: center;
+  }
   body[data-page="about"] .hero h1 {
     font-size: clamp(1.75rem, 7vw, 2.75rem) !important;
   }
