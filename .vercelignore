@@ -1,0 +1,10 @@
+.git/
+.github/
+.vscode/
+.cursor/
+node_modules/
+*.log
+scripts/
+agent-transcripts/
+terminals/
+assets/

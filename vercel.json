@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/about$", "dest": "/about.html" },
+    { "src": "^/agents$", "dest": "/agents.html" },
+    { "src": "^/pricing$", "dest": "/pricing.html" },
+    { "src": "^/contact$", "dest": "/contact.html" },
+    { "src": "^/content-engine$", "dest": "/content-engine.html" },
+    { "src": "^/blog$", "dest": "/blog/index.html" },
+    { "src": "^/blog/example-post$", "dest": "/blog/example-post.html" }
+  ]
+}
