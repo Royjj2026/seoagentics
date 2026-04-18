@@ -5736,6 +5736,14 @@ body[data-page] .hero h1 {
   color: #fff;
 }
 
+/* Insights: several merged `.hero` blocks set min-height: 100vh + flex — override here too */
+body[data-page="insights"] .hero.hero--insights {
+  min-height: 0 !important;
+  display: block !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+}
+
 @media (max-width: 480px) {
   body[data-page] .logo,
   .site-header .logo {
