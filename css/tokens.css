@@ -114,23 +114,29 @@
  */
 body[data-page] {
   color-scheme: dark;
-  --color-page: #070a0e;
-  --color-surface: #0c1018;
-  --color-surface-raised: #111720;
-  --color-text: #e8edf5;
-  --color-text-muted: rgba(232, 237, 245, 0.68);
-  --color-text-faint: rgba(232, 237, 245, 0.22);
-  --color-border: rgba(255, 255, 255, 0.07);
-  --color-border-hover: rgba(255, 255, 255, 0.13);
+  --color-page: #282828;
+  --color-surface: #323232;
+  --color-surface-raised: #3a3a3a;
+  --color-text: #e2e8f2;
+  --color-text-muted: rgba(226, 232, 242, 0.68);
+  --color-text-faint: rgba(226, 232, 242, 0.38);
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-hover: rgba(255, 255, 255, 0.18);
   --color-accent: #2ee1b5;
   --color-accent-hover: #52edc4;
   --color-accent-dim: rgba(46, 225, 181, 0.12);
   --color-accent-border: rgba(46, 225, 181, 0.22);
-  --color-nav-scrolled: rgba(7, 10, 14, 0.85);
+  /* Matches seo-agentics-homepage.html (nav bar when scrolled) */
+  --color-nav-scrolled: rgba(22, 22, 22, 0.96);
+  --color-nav-drawer: rgba(22, 22, 22, 0.98);
+  /* Hero video thumbnail overlay */
+  --color-video-overlay: rgba(7, 10, 14, 0.45);
+  /* Card surfaces (services grid, etc.) */
+  --color-card: #1e1e1e;
   --color-overlay: rgba(0, 0, 0, 0.88);
   --color-logo-mark: #070a0e;
-  /* Text on mint CTA buttons */
-  --color-accent-contrast: #070a0e;
+  /* Text on mint CTA buttons — matches Desktop export (#000) */
+  --color-accent-contrast: #000000;
 
   --color-link: var(--color-accent);
   --color-link-hover: var(--color-accent-hover);
@@ -143,6 +149,7 @@ body[data-page] {
   --bg: var(--color-page);
   --bg2: var(--color-surface);
   --bg3: var(--color-surface-raised);
+  --card: var(--color-card);
   --text: var(--color-text);
   --text-muted: var(--color-text-muted);
   --text-faint: var(--color-text-faint);

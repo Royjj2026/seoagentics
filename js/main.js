@@ -43,6 +43,23 @@
       { x: 0.7, y: 0.6, r: 0.48, a: 0.15 },
       { x: 0.3, y: 0.8, r: 0.45, a: 0.13 },
     ],
+    insights: [
+      { x: 0.5, y: 0.18, r: 0.52, a: 0.15 },
+      { x: 0.2, y: 0.45, r: 0.48, a: 0.13 },
+      { x: 0.78, y: 0.55, r: 0.5, a: 0.14 },
+      { x: 0.35, y: 0.78, r: 0.44, a: 0.12 },
+    ],
+    "insights-post": [
+      { x: 0.72, y: 0.22, r: 0.52, a: 0.15 },
+      { x: 0.28, y: 0.42, r: 0.48, a: 0.13 },
+      { x: 0.65, y: 0.62, r: 0.5, a: 0.14 },
+      { x: 0.4, y: 0.85, r: 0.44, a: 0.12 },
+    ],
+    blog: [
+      { x: 0.5, y: 0.3, r: 0.5, a: 0.14 },
+      { x: 0.25, y: 0.5, r: 0.48, a: 0.13 },
+      { x: 0.75, y: 0.65, r: 0.48, a: 0.13 },
+    ],
   };
 
   function setCurrentYear() {
@@ -225,10 +242,11 @@
       var cy = currentGlow.y * H;
       var radius = currentGlow.r * Math.max(W, H);
       var grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
-      grad.addColorStop(0, "rgba(14, 90, 60, " + currentGlow.a * 1.8 + ")");
-      grad.addColorStop(0.35, "rgba(10, 60, 42, " + currentGlow.a + ")");
-      grad.addColorStop(0.7, "rgba(5, 30, 22, " + currentGlow.a * 0.4 + ")");
-      grad.addColorStop(1, "rgba(7, 10, 14, 0)");
+      /* Matches Desktop homepage glow (seo-agentics-homepage.html) */
+      grad.addColorStop(0, "rgba(20, 110, 75, " + currentGlow.a * 1.6 + ")");
+      grad.addColorStop(0.35, "rgba(14, 75, 52, " + currentGlow.a + ")");
+      grad.addColorStop(0.7, "rgba(8, 40, 28, " + currentGlow.a * 0.4 + ")");
+      grad.addColorStop(1, "rgba(40, 40, 40, 0)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, W, H);
       requestAnimationFrame(drawGlow);
@@ -277,6 +295,39 @@
    * Primary CTAs are often <button> in the source HTML; send them to the contact page
    * so behaviour matches real links. Only runs on marketing pages (body[data-page]).
    */
+  function getContactHref() {
+    var override = document.body && document.body.getAttribute("data-contact-href");
+    if (override) return override;
+    var path = window.location.pathname || "";
+    if (path.indexOf("/blog") !== -1) return "../contact.html";
+    return "contact.html";
+  }
+
+  function initArticleToc() {
+    var headings = document.querySelectorAll(".prose h2[id], .prose h3[id]");
+    var tocItems = document.querySelectorAll(".toc-item");
+    if (!headings.length || !tocItems.length) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          tocItems.forEach(function (i) {
+            i.classList.remove("active");
+          });
+          var a = document.querySelector(
+            '.toc-item a[href="#' + entry.target.id + '"]'
+          );
+          if (a && a.parentElement) a.parentElement.classList.add("active");
+        });
+      },
+      { rootMargin: "-20% 0px -70% 0px" }
+    );
+    headings.forEach(function (h) {
+      observer.observe(h);
+    });
+  }
+
   function initCtaNavigation() {
     if (!document.body.hasAttribute("data-page")) return;
 
@@ -292,11 +343,13 @@
         return;
       }
 
-      var t = e.target.closest(".btn-cta, .btn-hero, .btn-demo, .btn-cta-ghost");
+      var t = e.target.closest(
+        ".btn-cta, .btn-hero, .btn-demo, .btn-cta-ghost, .btn-pricing-primary, .btn-pricing-ghost, .btn-sidebar, .btn-sidebar-ghost"
+      );
       if (!t || t.tagName === "A" || t.closest("form")) return;
 
       e.preventDefault();
-      window.location.href = "contact.html";
+      window.location.href = getContactHref();
     });
   }
 
@@ -390,6 +443,7 @@
     initAgentFilters();
     initFaq();
     initContactForm();
+    initArticleToc();
   }
 
   if (document.readyState === "loading") {

@@ -224,7 +224,7 @@ body[data-page="pricing"] .hero-sub {
     align-items: stretch;
     justify-content: flex-start;
     gap: 20px;
-    background: rgba(7, 10, 14, 0.97);
+    background: rgba(40, 40, 40, 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     overflow-y: auto;

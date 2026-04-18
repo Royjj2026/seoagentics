@@ -1,0 +1,149 @@
+/* Pricing page — aligned with seo-agentics-pricing.html (loads after marketing.css) */
+
+body[data-page="pricing"] #navbar .btn-accent {
+  font-weight: 600;
+  color: #000000;
+  text-shadow: none;
+  letter-spacing: normal;
+}
+
+body[data-page="pricing"] .fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+body[data-page="pricing"] .fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-page="pricing"] .hero {
+  padding: 160px 0 100px;
+}
+
+body[data-page="pricing"] .honest-right {
+  gap: 10px;
+}
+
+body[data-page="pricing"] .honest-card {
+  background: var(--card);
+  border: 1px solid rgba(46, 225, 181, 0.18);
+  transition: background 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+body[data-page="pricing"] .honest-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+}
+
+body[data-page="pricing"] .honest-card:hover::before {
+  transform: scaleX(1);
+}
+
+body[data-page="pricing"] .honest-card:hover {
+  background: rgba(46, 225, 181, 0.06);
+}
+
+body[data-page="pricing"] .model-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+body[data-page="pricing"] .model-step {
+  background: var(--card);
+  border: 1px solid rgba(46, 225, 181, 0.18);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+
+body[data-page="pricing"] .model-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+}
+
+body[data-page="pricing"] .model-step:hover::before {
+  transform: scaleX(1);
+}
+
+body[data-page="pricing"] .model-step:hover {
+  background: rgba(46, 225, 181, 0.06);
+}
+
+body[data-page="pricing"] .value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+body[data-page="pricing"] .value-card {
+  background: var(--card);
+  border: 1px solid rgba(46, 225, 181, 0.18);
+  border-radius: 12px;
+  padding: 36px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+
+body[data-page="pricing"] .value-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+}
+
+body[data-page="pricing"] .value-card:hover::before {
+  transform: scaleX(1);
+}
+
+body[data-page="pricing"] .value-card:hover {
+  background: rgba(46, 225, 181, 0.06);
+}
+
+body[data-page="pricing"] .draft-check {
+  background: var(--card);
+  border: 1px solid rgba(46, 225, 181, 0.18);
+}
+
+body[data-page="pricing"] .cta-section .btn-cta {
+  font-weight: 600;
+  letter-spacing: normal;
+  text-shadow: none;
+  color: #000000;
+}

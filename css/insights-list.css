@@ -1,0 +1,301 @@
+/* Insights listing — aligned with seo-agentics-insights.html (loads after marketing.css) */
+:root {
+  --cat-ai: #5ab4f5;
+  --cat-ai-dim: rgba(90, 180, 245, 0.12);
+  --cat-ai-border: rgba(90, 180, 245, 0.25);
+  --cat-tl: #c96cf5;
+  --cat-tl-dim: rgba(201, 108, 245, 0.12);
+  --cat-tl-border: rgba(201, 108, 245, 0.25);
+}
+
+body[data-page="insights"] #navbar .btn-accent {
+  font-weight: 600;
+  color: #000000;
+  text-shadow: none;
+}
+
+body[data-page="insights"] .fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body[data-page="insights"] .fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-page="insights"] .hero.hero--insights {
+  position: relative;
+  overflow: hidden;
+  text-align: left !important;
+  /* Very compact hero — minimal vertical padding below fixed nav */
+  padding: 72px 0 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+body[data-page="insights"] .hero.hero--insights::before {
+  content: "";
+  position: absolute;
+  left: min(22%, 180px);
+  top: 45%;
+  transform: translate(-40%, -50%);
+  width: min(560px, 90vw);
+  height: min(220px, 38vh);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(46, 225, 181, 0.1) 0%,
+    rgba(46, 225, 181, 0.03) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+body[data-page="insights"] .hero.hero--insights .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left !important;
+  max-width: 1180px;
+}
+
+body[data-page="insights"] .hero-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+body[data-page="insights"] .hero-breadcrumb a {
+  color: var(--text-faint);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+body[data-page="insights"] .hero-breadcrumb a:hover {
+  color: var(--text-muted);
+}
+
+body[data-page="insights"] .hero-breadcrumb .hero-breadcrumb-sep {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+body[data-page="insights"] .hero-breadcrumb .hero-breadcrumb-current {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Beat marketing `.hero h1 { max-width; margin-left/right: auto }` which centers the block */
+body[data-page="insights"] .hero.hero--insights h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 42rem;
+  text-align: left !important;
+  align-self: flex-start;
+}
+
+body[data-page="insights"] .hero.hero--insights h1 em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+/* Beat marketing `.hero-sub { margin: 0 auto }` which centers the paragraph */
+body[data-page="insights"] .hero.hero--insights .hero-sub {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: min(42rem, 90%);
+  margin: 0 !important;
+  text-align: left !important;
+  align-self: flex-start;
+}
+
+.blog-section {
+  padding: 56px 0 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border-radius: 14px;
+}
+
+.article-card {
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card:hover {
+  background: rgba(46, 225, 181, 0.06);
+}
+
+.article-card:hover .card-image svg {
+  transform: scale(1.04);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card-image svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card-body {
+  padding: 22px 22px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cat-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid;
+}
+
+.cat-ai {
+  background: var(--cat-ai-dim);
+  border-color: var(--cat-ai-border);
+  color: var(--cat-ai);
+}
+
+.cat-tl {
+  background: var(--cat-tl-dim);
+  border-color: var(--cat-tl-border);
+  color: var(--cat-tl);
+}
+
+.card-date {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.4px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.card-excerpt {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-weight: 300;
+  flex: 1;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.card-read-time {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  body[data-page="insights"] .hero.hero--insights {
+    padding: 68px 0 14px;
+  }
+
+  body[data-page="insights"] .hero.hero--insights::before {
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+    opacity: 0.85;
+  }
+
+  body[data-page="insights"] .hero.hero--insights .hero-sub {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="insights"] .hero.hero--insights {
+    padding: 64px 0 12px;
+  }
+}

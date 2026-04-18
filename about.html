@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    </script>
     <title>About — SEO Agentics</title>
-    <meta name="description" content="Why SEO Agentics exists: bespoke content engines and agents shaped around each agency's methodology, experience, and client roster." />
-    <meta name="theme-color" content="#070a0e" />
+    <meta name="description" content="Why we built SEO Agentics for agencies and how we think about AI content at scale." />
+    <meta name="theme-color" content="#282828" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;display=swap" rel="stylesheet" />
@@ -14,25 +17,23 @@
   <body data-page="about">
     <div id="header-include"></div>
 
-<!-- HERO: breadcrumb sits above the two-column row so the headline aligns with the stat cards -->
+<!-- HERO -->
 <section id="page-main" class="hero">
   <div class="container">
-    <div class="hero-breadcrumb fade-up">
-      <a href="index.html">Home</a>
-      <span class="hero-breadcrumb-sep" aria-hidden="true">→</span>
-      <span class="hero-breadcrumb-current">About</span>
-    </div>
     <div class="hero-inner">
-      <div class="hero-copy">
+      <div>
+        <div class="hero-breadcrumb fade-up">
+          <a href="index.html">Home</a>
+          <span>→</span>
+          <span>About</span>
+        </div>
         <h1 class="fade-up fade-up-delay-1">
-          Built for agencies<br />
-          tired of almost<br />
-          <em> good enough.</em>
+          Built for agencies<br>tired of <em>almost good enough.</em>
         </h1>
         <p class="hero-intro fade-up fade-up-delay-2">
           SEO Agentics exists because the tools that existed weren't built for the way agencies actually work. They were built for individuals, not for managing twelve clients with twelve different voices, twelve different audiences, and twelve different definitions of quality.
         </p>
-        <p class="hero-intro hero-intro--tight fade-up fade-up-delay-2">
+        <p class="hero-intro fade-up fade-up-delay-2" style="margin-bottom:0">
           We built something different. Not a tool you configure with a prompt — an engine built specifically into your environment, around your clients, around your workflow.
         </p>
       </div>
@@ -172,34 +173,34 @@
 </section>
 
 <!-- HOW WE WORK -->
-<section class="about-how-section">
+<section class="how-section">
   <div class="container">
     <div class="section-label fade-up">How we work</div>
     <h2 class="section-h2 fade-up fade-up-delay-1">Every engagement<br>is bespoke.</h2>
-    <div class="about-how-grid">
-      <div class="about-how-card fade-up">
-        <div class="about-how-icon">
+    <div class="how-grid">
+      <div class="how-card fade-up">
+        <div class="how-icon">
           <svg viewBox="0 0 20 20"><path d="M10 10a3 3 0 100-6 3 3 0 000 6z"/><path d="M3 18c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg>
         </div>
         <h3>We start with your agency</h3>
         <p>Before we touch a single client, we understand how your agency works — your briefing process, your production workflow, your quality standards, and what good output looks like to you. Everything is built from that foundation.</p>
       </div>
-      <div class="about-how-card fade-up fade-up-delay-1">
-        <div class="about-how-icon">
+      <div class="how-card fade-up fade-up-delay-1">
+        <div class="how-icon">
           <svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5"/><path d="M14 11v6M11 14h6"/></svg>
         </div>
         <h3>Each client gets their own build</h3>
         <p>We configure a dedicated content engine for each client — their brand, their ICP, their existing content library, their linking architecture. Nothing is shared between clients. Each engine is isolated and specific.</p>
       </div>
-      <div class="about-how-card fade-up fade-up-delay-2">
-        <div class="about-how-icon">
+      <div class="how-card fade-up fade-up-delay-2">
+        <div class="how-icon">
           <svg viewBox="0 0 20 20"><path d="M4 10h12M10 4v12"/><circle cx="10" cy="10" r="8"/></svg>
         </div>
         <h3>We deploy in your environment</h3>
         <p>The finished system lives in your infrastructure — not ours. There's no centralised platform, no shared login, no external database of your client data. You own the system. We built it for you.</p>
       </div>
-      <div class="about-how-card fade-up fade-up-delay-3">
-        <div class="about-how-icon">
+      <div class="how-card fade-up fade-up-delay-3">
+        <div class="how-icon">
           <svg viewBox="0 0 20 20"><path d="M10 3v4M10 13v4M3 10h4M13 10h4"/><path d="M5.6 5.6l2.8 2.8M11.6 11.6l2.8 2.8M5.6 14.4l2.8-2.8M11.6 8.4l2.8-2.8"/></svg>
         </div>
         <h3>We refine as you grow</h3>
@@ -257,8 +258,7 @@
   </div>
 </section>
 
-<div id="footer-include"></div>
-<script src="js/includes.js"></script>
-
+    <div id="footer-include"></div>
+    <script src="js/includes.js"></script>
   </body>
 </html>

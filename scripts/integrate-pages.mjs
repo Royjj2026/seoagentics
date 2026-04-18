@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 
-const SHARED_HEAD_EXTRA = `    <meta name="theme-color" content="#070a0e" />
+const SHARED_HEAD_EXTRA = `    <meta name="theme-color" content="#282828" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;display=swap" rel="stylesheet" />
@@ -20,14 +20,16 @@ function navHtml(active) {
   };
   return `<nav id="navbar" aria-label="Primary">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-mark">
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M3 12L8 4L13 12" stroke="#070a0e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M5 9h6" stroke="#070a0e" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
+    <a href="index.html" class="logo" aria-label="SEO Agentics — Home" data-nav="home">
+      <div class="logo-bars" aria-hidden="true">
+        <div class="logo-bar logo-bar-1"></div>
+        <div class="logo-bar logo-bar-2"></div>
+        <div class="logo-bar logo-bar-3"></div>
       </div>
-      SEO Agentics
+      <div class="logo-wordmark">
+        <span class="logo-seo">SEO </span>
+        <span class="logo-agentics">agentics</span>
+      </div>
     </a>
     <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
       <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>

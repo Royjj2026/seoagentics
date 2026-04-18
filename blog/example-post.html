@@ -3,33 +3,184 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Example post — SEO Agentics</title>
-    <meta name="description" content="Replace with post summary for SEO." />
-    <meta name="theme-color" content="#f7f7f6" />
+    <script>
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    </script>
+    <title>The difference between content that ranks and content that converts — SEO Agentics</title>
+    <meta name="description" content="Ranking vs conversion in SEO content — the framework we use to close the gap." />
+    <meta name="theme-color" content="#282828" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/marketing.css" />
+    <link rel="stylesheet" href="../css/article-post.css" />
   </head>
-  <body data-blog data-blog-page="post" data-main-js="../js/main.js">
-    <div id="header-include"></div>
+  <body data-page="insights-post" data-main-js="../js/main.js">
+    <div id="header-include" data-include="../header.html"></div>
 
-    <main id="main" class="narrow">
-      <article class="post">
-        <header class="post__header">
-          <h1>Example post</h1>
-          <p class="post-meta">
-            <time datetime="2026-04-16">April 16, 2026</time>
-            · <span>Author name</span>
-          </p>
-        </header>
-        <div class="post__content prose">
-          <p>Replace this body with your post HTML. New files in <code>blog/</code> should use the same <code>../css/style.css</code> and <code>../js/main.js</code> paths.</p>
+<div class="page-wrap" id="page-main">
+  <div class="article-header">
+    <div class="article-breadcrumb">
+      <a href="../index.html">Home</a><span>&#8594;</span>
+      <a href="../insights.html">Insights</a><span>&#8594;</span>
+      <span>Thought leadership</span>
+    </div>
+    <div class="article-meta-top">
+      <span class="cat-tag cat-tl">Thought leadership</span>
+      <span class="article-dot"></span>
+      <span class="article-date">5 April 2025</span>
+      <span class="article-dot"></span>
+      <span class="article-read-time">6 min read</span>
+    </div>
+    <h1 class="article-h1">The difference between content that ranks and content that converts</h1>
+    <p class="article-standfirst">Most SEO content is optimised for one or the other. The best content — and the hardest to produce — does <em>both.</em> Here's the framework we use to close that gap.</p>
+  </div>
+
+  <div class="sep-rule">
+    <div class="sep-rule-line"></div>
+    <div class="sep-rule-diamond"></div>
+    <div class="sep-rule-line"></div>
+  </div>
+
+  <div class="article-layout" style="margin-top:48px">
+    <aside class="toc-sidebar">
+      <div class="toc-label">In this article</div>
+      <ul class="toc-list">
+        <li class="toc-item active"><a href="#the-problem">The problem with one</a></li>
+        <li class="toc-item"><a href="#ranking-signals">What ranking content needs</a></li>
+        <li class="toc-item sub"><a href="#intent-match">Intent matching</a></li>
+        <li class="toc-item sub"><a href="#topical-depth">Topical depth</a></li>
+        <li class="toc-item"><a href="#conversion-signals">What converting content needs</a></li>
+        <li class="toc-item sub"><a href="#icp-angle">The ICP angle</a></li>
+        <li class="toc-item sub"><a href="#usp-positioning">USP positioning</a></li>
+        <li class="toc-item"><a href="#the-framework">The framework we use</a></li>
+        <li class="toc-item"><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </aside>
+
+    <article class="article-body">
+      <div class="tldr-box">
+        <div class="tldr-header">
+          <div class="tldr-icon"><svg viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3"/></svg></div>
+          <span class="tldr-label">30-second summary</span>
         </div>
-      </article>
-    </main>
+        <ul class="tldr-list">
+          <li><strong>Most SEO content is built to rank</strong> &#8212; it matches intent, covers the topic, and ticks the technical boxes. It gets traffic. It rarely converts.</li>
+          <li><strong>Conversion comes from positioning</strong> &#8212; angling the content around the reader's problem and the client's USP simultaneously. Most tools can't do this automatically.</li>
+          <li><strong>The gap is in the brief, not the writing</strong> &#8212; content that does both starts before a word is written. The ICP, the USP, and the intent have to be loaded into the foundation.</li>
+          <li><strong>This is what the Content Engine is built to do</strong> &#8212; each client's ICP and USP are embedded at the engine level, not added as an afterthought in the prompt.</li>
+        </ul>
+      </div>
 
-    <div id="footer-include"></div>
+      <div class="prose">
+        <p>There's a specific frustration that most SEO agencies know well. You produce content that ranks &#8212; page one, sometimes position one &#8212; and the traffic numbers look great. The client report looks great. And then the client asks why their leads aren't improving.</p>
+        <p>The content ranked. It just didn't convert. And those two things, it turns out, are not the same problem.</p>
+
+        <h2 id="the-problem">The problem with optimising for one</h2>
+        <p>The default mode for SEO content production is to optimise for ranking signals. Match the intent. Cover the topic with sufficient depth. Satisfy what the top-ranking pages are doing, plus a little more. This is sound practice &#8212; it gets content onto page one.</p>
+        <p>But ranking signals and conversion signals are different audiences. The algorithm is reading for relevance, authority, and structure. The human is reading for answers, credibility, and a reason to act.</p>
+        <p>Content optimised purely for ranking tends to feel encyclopaedic. It covers everything. It's thorough. It's also, frequently, uncommitted &#8212; it doesn't take a position, it doesn't offer a point of view, and it doesn't connect the reader's problem to a specific solution.</p>
+
+        <blockquote><p>"The best content doesn't pick between ranking and converting. It's built from the start to do both &#8212; because the foundation is different, not the writing."</p></blockquote>
+
+        <h2 id="ranking-signals">What ranking content needs</h2>
+        <p>Content that ranks well typically:</p>
+        <ul>
+          <li>Matches the dominant search intent of its target keyword</li>
+          <li>Covers the topic with appropriate depth and semantic breadth</li>
+          <li>Uses structured headings that mirror how searchers think about the topic</li>
+          <li>Earns or attracts links from relevant, authoritative sources</li>
+        </ul>
+
+        <h3 id="intent-match">Intent matching</h3>
+        <p>This is the most important ranking signal that's most often treated superficially. Intent isn't just informational, navigational, or transactional &#8212; it's about understanding what the searcher actually wants to achieve with the answer, and structuring content around that outcome rather than the keyword itself.</p>
+
+        <h3 id="topical-depth">Topical depth</h3>
+        <p>Depth isn't word count. It's semantic coverage &#8212; how well the content addresses the full range of questions, angles, and related concepts that surround the main topic. Topic modelling data tells you what that looks like for any given keyword cluster. Most content briefs don't include it.</p>
+
+        <h2 id="conversion-signals">What converting content needs</h2>
+        <p>Content that converts well does something different. It positions the reader's problem against a specific solution. It doesn't just explain what something is &#8212; it explains why this answer, from this source, is the right one for this reader.</p>
+
+        <h3 id="icp-angle">The ICP angle</h3>
+        <p>Every client has an ideal customer profile. Content that converts speaks directly to that profile &#8212; the specific industry, company size, role, and pain point that the client's best customers share. Generic SEO content doesn't do this. It addresses the broadest possible readership to maximise traffic. That's the trade-off.</p>
+        <p><strong>Content that converts narrows its audience deliberately.</strong> It accepts that some readers will bounce because the piece isn't for them &#8212; and optimises for the readers it is for.</p>
+
+        <h3 id="usp-positioning">USP positioning</h3>
+        <p>The client's unique selling proposition needs to be embedded in the content &#8212; not as an ad, not as a CTA, but as the lens through which the topic is explored. If a legal firm's USP is a no-win-no-fee model, every piece of content should be written from the perspective of a reader who will eventually care about risk. That's USP positioning done structurally, not as a tagline.</p>
+
+        <div class="callout"><p>This is the capability that separates a content engine from a writing tool. The ICP and USP have to be loaded into the foundation &#8212; into the brief, the angle, and the structure &#8212; before writing begins. You can't add them afterwards and expect the same result.</p></div>
+
+        <h2 id="the-framework">The framework we use</h2>
+        <p>When we configure a client engine, we start with four inputs before a single keyword is touched:</p>
+        <ol>
+          <li><strong>ICP definition</strong> &#8212; who the client's best customer is, what they need, what they're searching for, and what objections they have</li>
+          <li><strong>USP framework</strong> &#8212; what makes the client the right choice, framed as reader benefit rather than company feature</li>
+          <li><strong>Competitor positioning</strong> &#8212; what the top-ranking content is saying, and where the whitespace is</li>
+          <li><strong>Intent mapping</strong> &#8212; what the searcher actually wants to achieve, mapped to content format and structure</li>
+        </ol>
+        <p>Every brief that comes out of the engine is filtered through these four inputs. The content that results doesn't just rank &#8212; it ranks for the right people, and it gives those people a reason to act.</p>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>The gap between content that ranks and content that converts is not a writing problem. It's a briefing problem &#8212; specifically, a problem of what information is loaded into the foundation before writing begins.</p>
+        <p>If the ICP and USP are embedded at that level, content will do both. If they're added as an afterthought, the result will be content that ranks and doesn't convert, every time.</p>
+        <p>This is the most important design decision in the Content Engine. Not the AI model. Not the style matching. The foundation.</p>
+      </div>
+
+      <div class="article-footer-author">
+        <div class="footer-avatar">SA</div>
+        <div class="footer-author-info">
+          <h4>Written by the founder, SEO Agentics</h4>
+          <p>15 years in SEO, focused on content and on-page. Previously worked with Surfer SEO and MarketMuse. Built SEO Agentics to solve the exact problem described in this article &#8212; at scale, across agency client rosters.</p>
+        </div>
+      </div>
+
+      <div class="article-cta">
+        <h3>See the Content Engine in action</h3>
+        <p>ICP alignment, USP positioning, intent matching &#8212; embedded into the foundation before writing begins, for every client on your roster.</p>
+        <div class="article-cta-row">
+          <button type="button" class="btn-cta">Book a demo call</button>
+          <button type="button" class="btn-cta-ghost">Contact us to discuss</button>
+        </div>
+      </div>
+    </article>
+
+    <aside class="right-sidebar">
+      <div class="sidebar-demo-card">
+        <div class="sidebar-demo-label">Ready to see it built?</div>
+        <h4>The Content Engine does this automatically &#8212; for every client.</h4>
+        <p>ICP alignment, USP positioning, intent matching &#8212; embedded into the foundation, not added as a prompt.</p>
+        <button type="button" class="btn-sidebar">Book a demo call</button>
+        <button type="button" class="btn-sidebar-ghost">Contact us to discuss</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="related-section">
+    <div class="related-label">More from Insights</div>
+    <div class="related-grid">
+      <a class="related-card" href="../insights.html">
+        <div class="related-card-meta"><span class="cat-tag cat-ai">AI in SEO</span><span style="font-size:11px;color:var(--text-faint)">28 Mar 2025</span></div>
+        <div class="related-card-title">AI content detection: what actually works and what agencies get wrong</div>
+        <div class="related-card-excerpt">Detection tools have improved. So has the content they're trying to catch. Here's the honest picture.</div>
+        <div class="related-card-read">7 min read</div>
+      </a>
+      <a class="related-card" href="../insights.html">
+        <div class="related-card-meta"><span class="cat-tag cat-tl">Thought leadership</span><span style="font-size:11px;color:var(--text-faint)">19 Mar 2025</span></div>
+        <div class="related-card-title">How to scale your SEO agency without scaling your headcount</div>
+        <div class="related-card-excerpt">The agencies that grow fastest systemise first. What that looks like in practice, and where most go wrong.</div>
+        <div class="related-card-read">9 min read</div>
+      </a>
+      <a class="related-card" href="../insights.html">
+        <div class="related-card-meta"><span class="cat-tag cat-tl">Thought leadership</span><span style="font-size:11px;color:var(--text-faint)">20 Feb 2025</span></div>
+        <div class="related-card-title">Internal linking at scale: the system that most agencies never build</div>
+        <div class="related-card-excerpt">One of the highest-ROI SEO activities. Also the most consistently neglected at agency scale.</div>
+        <div class="related-card-read">7 min read</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <div id="footer-include" data-include="../footer.html"></div>
     <script src="../js/includes.js"></script>
   </body>
 </html>

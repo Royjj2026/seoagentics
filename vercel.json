@@ -8,6 +8,7 @@
     { "src": "^/pricing$", "dest": "/pricing.html" },
     { "src": "^/contact$", "dest": "/contact.html" },
     { "src": "^/content-engine$", "dest": "/content-engine.html" },
+    { "src": "^/insights$", "dest": "/insights.html" },
     { "src": "^/blog$", "dest": "/blog/index.html" },
     { "src": "^/blog/example-post$", "dest": "/blog/example-post.html" }
   ]

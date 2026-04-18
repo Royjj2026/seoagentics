@@ -8,7 +8,7 @@
     </script>
     <title>SEO Agentics — AI Content Engine for Agencies</title>
     <meta name="description" content="Per-client AI content engines and SEO agents for agencies. Brand-faithful content at scale without generic output." />
-    <meta name="theme-color" content="#070a0e" />
+    <meta name="theme-color" content="#282828" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
     <div id="header-include"></div>
 
 <!-- HERO -->
-<section id="page-main" class="hero">
+<section class="hero" id="page-main">
   <div class="container">
     <div class="hero-inner">
 
@@ -58,15 +58,38 @@
           <div class="chrome-dot"></div>
           <span class="chrome-label">SEO Agentics — Platform walkthrough</span>
         </div>
-        <div class="video-thumbnail video-thumbnail--embed">
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/FwOTs4UxQS4"
-              title="SEO Agentics — platform walkthrough"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+        <div class="video-thumbnail">
+          <!-- Stylised dashboard thumbnail -->
+          <div class="thumb-grid">
+            <div class="thumb-sidebar">
+              <div class="thumb-nav-item active"></div>
+              <div class="thumb-nav-item"></div>
+              <div class="thumb-nav-item"></div>
+              <div class="thumb-nav-item"></div>
+              <div class="thumb-nav-item"></div>
+            </div>
+            <div class="thumb-main">
+              <div class="thumb-top-row">
+                <div class="thumb-pill"></div>
+              </div>
+              <div class="thumb-row medium"></div>
+              <div class="thumb-row short"></div>
+              <div class="thumb-row medium"></div>
+              <div class="thumb-row" style="width:40%"></div>
+              <div class="thumb-stats">
+                <div class="thumb-stat-box highlight">47</div>
+                <div class="thumb-stat-box highlight" style="color: var(--accent); opacity:0.35">0%</div>
+                <div class="thumb-stat-box">1.2k</div>
+              </div>
+            </div>
+          </div>
+          <!-- Dark overlay + play button -->
+          <div class="video-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="video-caption">3 min walkthrough · See the content engine and AI agents in action</div>
@@ -79,16 +102,14 @@
 <!-- VIDEO MODAL -->
 <div class="video-modal" id="videoModal">
   <div class="modal-inner">
-    <button class="modal-close">×</button>
+    <button type="button" class="modal-close">×</button>
     <div class="modal-video-frame">
-      <div class="video-embed video-embed--modal">
-        <iframe
-          src="https://www.youtube.com/embed/FwOTs4UxQS4"
-          title="SEO Agentics — platform walkthrough"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+      <div class="modal-placeholder">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+          <circle cx="28" cy="28" r="27" stroke="rgba(46,225,181,0.3)" stroke-width="1"/>
+          <path d="M22 20v16l14-8z" fill="rgba(46,225,181,0.5)"/>
+        </svg>
+        <p style="color: var(--text-faint); font-size:14px; margin-top:16px;">Your walkthrough video will appear here.<br>Replace with a YouTube embed or hosted video URL.</p>
       </div>
     </div>
   </div>
@@ -356,16 +377,56 @@
   <div class="container">
     <div class="section-label fade-up">Pricing</div>
     <h2 class="section-h2 fade-up fade-up-delay-1">Scales with<br>your roster.</h2>
-    <p class="section-sub fade-up fade-up-delay-2">A one-time setup fee to configure your platform, then per-client seat pricing as your agency grows. You only pay more when you win more.</p>
-    <div class="pricing-card fade-up">
-      <div>
-        <h3>Setup + per-client seats</h3>
-        <p>Your platform is fully configured during onboarding. Each new client is added as a dedicated seat with their own engine, brand memory, and RAG database. No bloated annual contracts — pricing grows only when your roster does.</p>
+    <p class="section-sub fade-up fade-up-delay-2">A one-time setup, then per-client pricing as your agency grows. You only pay more when you win more.</p>
+    <div class="pricing-grid fade-up">
+
+      <div class="pricing-left">
+        <h3>How the pricing works</h3>
+        <p>There are no bloated annual contracts or per-seat SaaS fees. The model is built around how agencies actually grow — you pay to set up, then add clients one at a time as your roster expands.</p>
+        <div class="price-model-row">
+          <div class="price-model-num">01</div>
+          <div class="price-model-label">Agency setup &amp; onboarding</div>
+          <div class="price-model-detail">One-time fee</div>
+        </div>
+        <div class="price-model-row">
+          <div class="price-model-num">02</div>
+          <div class="price-model-label">Per-client engine build</div>
+          <div class="price-model-detail">One-time per client</div>
+        </div>
+        <div class="price-model-row">
+          <div class="price-model-num">03</div>
+          <div class="price-model-label">Monthly retainer per client</div>
+          <div class="price-model-detail">From $25 / client</div>
+        </div>
+        <div style="margin-top:28px">
+          <div class="pricing-check-row"><div class="pricing-check-icon"><svg viewBox="0 0 9 9"><path d="M1.5 4.5l2 2L7.5 2"/></svg></div><div class="pricing-check-text"><strong>Volume discounts</strong> apply as your roster grows past 10, 20, and 30 clients</div></div>
+          <div class="pricing-check-row"><div class="pricing-check-icon"><svg viewBox="0 0 9 9"><path d="M1.5 4.5l2 2L7.5 2"/></svg></div><div class="pricing-check-text"><strong>No lock-in.</strong> Add or remove clients as your roster changes</div></div>
+          <div class="pricing-check-row"><div class="pricing-check-icon"><svg viewBox="0 0 9 9"><path d="M1.5 4.5l2 2L7.5 2"/></svg></div><div class="pricing-check-text"><strong>Exact pricing</strong> is discussed on your demo call based on roster size</div></div>
+        </div>
       </div>
-      <div class="pricing-right">
-        <div class="pricing-label">Pricing model</div>
-        <div class="pricing-value">Discussed on your demo call</div>
+
+      <div class="pricing-cta-card">
+        <div class="pricing-cta-label">Monthly per client</div>
+        <div class="pricing-price-line">
+          <span class="pricing-price-from">from</span>
+          <span class="pricing-price-val">$25</span>
+          <span class="pricing-price-unit">/ client / mo</span>
+        </div>
+        <div class="pricing-price-note">Volume discounts from 10 clients.<br>Setup &amp; engine build discussed on call.</div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-cta-features">
+          <div class="pricing-check-row"><div class="pricing-check-icon"><svg viewBox="0 0 9 9"><path d="M1.5 4.5l2 2L7.5 2"/></svg></div><div class="pricing-check-text">Dedicated engine per client</div></div>
+          <div class="pricing-check-row"><div class="pricing-check-icon"><svg viewBox="0 0 9 9"><path d="M1.5 4.5l2 2L7.5 2"/></svg></div><div class="pricing-check-text">Full brand &amp; RAG database setup</div></div>
+          <div class="pricing-check-row"><div class="pricing-check-icon"><svg viewBox="0 0 9 9"><path d="M1.5 4.5l2 2L7.5 2"/></svg></div><div class="pricing-check-text">Human Authenticity Layer included</div></div>
+          <div class="pricing-check-row"><div class="pricing-check-icon"><svg viewBox="0 0 9 9"><path d="M1.5 4.5l2 2L7.5 2"/></svg></div><div class="pricing-check-text">All AI agents across all clients</div></div>
+        </div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-cta-btn-row">
+          <button class="btn-pricing-primary">Book a demo call</button>
+          <button class="btn-pricing-ghost">Contact us to discuss</button>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -382,8 +443,8 @@
   </div>
 </section>
 
-<div id="footer-include"></div>
-<script src="js/includes.js"></script>
-
+<!-- FOOTER -->
+    <div id="footer-include"></div>
+    <script src="js/includes.js"></script>
   </body>
 </html>
