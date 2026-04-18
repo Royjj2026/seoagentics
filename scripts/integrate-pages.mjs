@@ -55,8 +55,8 @@ const FOOTER = `<footer>
   <div class="footer-inner">
     <span class="footer-copy">© <span data-year></span> SEO Agentics. All rights reserved.</span>
     <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
       <a href="contact.html">Contact</a>
     </div>
   </div>

@@ -1,0 +1,104 @@
+/* Privacy & Terms — same shell as contact (loads after marketing.css) */
+
+body[data-page="privacy"] .page.legal-page,
+body[data-page="terms"] .page.legal-page {
+  min-height: 0 !important;
+  display: block !important;
+  align-items: unset !important;
+  padding-top: var(--hero-padding-top);
+  padding-bottom: var(--hero-padding-bottom);
+}
+
+body[data-page="privacy"] #navbar .btn-accent,
+body[data-page="terms"] #navbar .btn-accent {
+  font-weight: 600;
+  color: #000000;
+  text-shadow: none;
+}
+
+.legal-page .container {
+  max-width: 720px;
+}
+
+.legal-page .breadcrumb {
+  margin-bottom: 22px;
+}
+
+.legal-page h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.legal-meta {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+.legal-prose {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.legal-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin: 2.25rem 0 0.75rem;
+}
+
+.legal-prose h2:first-child {
+  margin-top: 0;
+}
+
+.legal-prose p {
+  margin: 0 0 1rem;
+}
+
+.legal-prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.legal-prose li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-prose li::marker {
+  color: var(--accent);
+}
+
+.legal-prose a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(46, 225, 181, 0.35);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.legal-prose a:hover {
+  color: #fff;
+  border-bottom-color: var(--accent);
+}
+
+.legal-prose strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  body[data-page="privacy"] .page.legal-page,
+  body[data-page="terms"] .page.legal-page {
+    padding-top: var(--hero-padding-top-sm) !important;
+    padding-bottom: var(--hero-padding-bottom-sm) !important;
+  }
+}

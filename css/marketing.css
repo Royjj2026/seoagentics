@@ -4685,36 +4685,46 @@ body[data-page="content-engine"] #navbar .btn-accent {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  width: auto;
+  height: auto;
+  padding: 10px;
   margin: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  margin-left: auto;
+  border: none;
+  border-radius: 0;
   background: transparent;
-  color: var(--text);
+  box-shadow: none;
+  color: inherit;
   cursor: pointer;
   flex-shrink: 0;
-  margin-left: auto;
   z-index: 220;
-  transition: border-color 0.2s, background 0.2s;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 .nav-toggle:hover {
-  border-color: var(--border-hover);
-  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  outline: none;
+  background: rgba(46, 225, 181, 0.08);
+}
+.nav-toggle:focus-visible {
+  outline: none;
+  background: rgba(46, 225, 181, 0.1);
 }
 .nav-toggle-bars {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 18px;
+  width: 20px;
 }
 .nav-toggle-bars span {
   display: block;
   height: 2px;
   width: 100%;
-  background: var(--text-muted);
+  background: #2ee1b5;
   border-radius: 1px;
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
